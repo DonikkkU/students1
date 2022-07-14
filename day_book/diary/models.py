@@ -29,3 +29,4 @@ class Teacher(models.Model):
 class Message(models.Model):
     body = models.TextField(blank=True, null=False)
     phone = models.IntegerField(blank=True, null=False)
+    student = models.OneToOneField(Student, on_delete=models.CASCADE, null=True, blank=True)
